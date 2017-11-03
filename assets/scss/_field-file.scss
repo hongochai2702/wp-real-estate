@@ -1,0 +1,86 @@
+.tpfw-upload{
+
+    table {
+        width: 100%;
+        padding: 0 !important;
+
+        th {
+            padding: 7px 0 7px 7px !important;
+
+            &.sort {
+                width: 17px;
+                padding: 7px !important;
+            }
+
+            .woocommerce-help-tip {
+                font-size: 1.1em;
+                margin-left: 0;
+            }
+        }
+
+        td {
+            vertical-align: middle !important;
+            padding: 4px 0 4px 7px !important;
+            position: relative;
+
+            &:last-child {
+                padding-right: 7px !important;
+            }
+
+            input.input_text {
+                width: 100%;
+                float: none;
+                min-width: 0;
+                margin: 1px 0;
+            }
+
+            .upload_file {
+                width: auto;
+                float: right;
+                cursor: pointer;
+            }
+
+            .delete {
+
+                @include ir();
+                font-size: 1.2em;
+
+                &::before {
+                    @include icon_dashicons( '\f153' );
+                    color: #999;
+                }
+
+                &:hover {
+                    &::before {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        td.sort {
+            width: 17px;
+            cursor: move;
+            font-size: 15px;
+            text-align: center;
+            background: #f9f9f9;
+            padding-right: 7px !important;
+
+            &::before {
+                content: '\f333';
+                font-family: 'Dashicons';
+                text-align: center;
+                line-height: 1;
+                color: #999;
+                display: block;
+                width: 17px;
+                float: left;
+                height: 100%;
+            }
+
+            &:hover::before {
+                color: #333;
+            }
+        }
+    }
+}
